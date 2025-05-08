@@ -11,7 +11,7 @@ public class Main {
 
             System.out.println("""
                         🪙 CONVERSOR DE MOEDAS 🪙
-                         
+                   
                     1) Dólar =>> Peso Argentino
                     2) Peso Argentino ==> Dólar
                     3) Dólar =>> Real Brasileiro
@@ -32,7 +32,6 @@ public class Main {
                 case 1:
                     moeda = "USD";
                     target_code = "ARS";
-
                     break;
                 case 2:
                     moeda = "ARS";
@@ -59,15 +58,11 @@ public class Main {
                     break;
                 default:
                     System.out.println("Opação inválida.\nEscolha uma opção válida.");
-
             }
             Moeda novaMoeda = cMoeda.consultaMoeda(moeda, target_code, valorAConverter);
             System.out.printf("""
                     O valor %s [%s] corresponde ao valor final de =>> %f [%s]
-                    
-                    """, valorAConverter, novaMoeda.base_code(), novaMoeda.conversion_result(), novaMoeda.target_code())
-            ;
-
+                   """, valorAConverter, novaMoeda.base_code(), novaMoeda.conversion_result(), novaMoeda.target_code());
         }
         leitura.close();
 
